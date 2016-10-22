@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>simple chat!</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!--    <script src="https://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>-->
+</head>
+
+<body>
+    <main>
+
+        <div id="display">
+            <ul id="board">
+
+            </ul>
+        </div>
+
+        <div id="operation">
+            <div id="user">
+                <label for="name" class="userProperty">名前：</label>
+                <input type="text" id="name" class="userProperty">
+            </div>
+            <!--メッセージの入力エリア-->
+            <textarea id="msg" cols="30" rows="4"></textarea>
+            <button id="sendButton">メッセージ送信</button>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

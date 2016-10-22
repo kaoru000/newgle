@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'EmojiSymbols';
+    src: url('../font/EmojiSymbols-Regular.woff') format('woff');
+}
+
+/*
+Emoji Symbols Font (c)blockworks - Kenichi Kaneko
+http://emojisymbols.com/
+*/
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font: 18px 'Lucida Grande', 'Lucida Sans Unicode', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', Helvetica, Arial, Verdana, sans-serif, 'EmojiSymbols';
+    /*    font-family: 'Helvetica', 'Arial', 'Segoe UI Symbol', 'sans-serif','Apple Color Emoji', 'EmojiSymbols';*/
+}
+
+main {
+    padding: 10px;
+    text-align: center;
+}
+#display {
+    padding: 10px;
+    background-color: aqua;
+    width: 50em;
+    height: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    overflow:scroll;
+}
+
+.message {
+    background-color: #ff9d00;
+    margin: 10px;
+    padding: 10px;
+}
+
+.message:nth-child(odd) {
+    text-align: right;
+}
+.message:nth-child(even) {
+    text-align: left;
+}
+
+#operation {
+    background: #eee;
+/*
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+*/
+    width: 32em;
+/*    margin-left: -15em;*/
+    text-align: center;
+    padding: 14px;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+#user {
+    display:block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.userProperty {
+    display: inline-block;
+}
+
+.nameOnMessage {
+    display: block
+}
+
+.sendMessage {
+    display: block;
+    background-color:#fff;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.dateOnMessage {
+    display: block
+}
+
+#msg {
+    display: block;
+    margin: auto;
+    width: 30em;
+    height: 10em;
+    font-size: 14px;
+}
+
+#sendButton {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+#sendButton:hover {
+    cursor: pointer;
+}
+
+/*以下、特殊キーボード関連CSS*/
+
+/*注意書き*/
+#caution{
+    background: rgba(87, 210, 255, 0.5);
+    position: fixed;
+    z-index: 99999;
+    left:10px;
+    top:10px;
+    width: 14em;
+/*    height: 18em;*/
+    font-size: 14px;
+    padding: 1em 1.25em;
+/*    box-shadow: 3px 3px 3px 3px #555;*/
+    border-radius: 6px;
+/*    border-width: 1px;*/
+    line-height: 150%;
+}
+
+#note{
+    text-align: center;
+}
+
+#noteArea {
+/*    margin: 3%;*/
+/*    background: #ddd;*/
+    width: 40em;
+    height: 18em;
+    font-size: 14px;
+    padding: 1em;
+/*    box-shadow: 3px 3px 3px 3px #555;*/
+    border-radius: 6px;
+    border-width: 1px;
+}
+
+
+/*http://black-flag.net/jquery/20110223-2654.html*/
+/*テキストエリア等がフォーカスされた時*/
+.focus {
+	background: #feffdd;
+}
+
+/*特殊キーボードが有効な時のテキストエリアの背景色*/
+.focus_special {
+	background: #ddf3ff;
+}
+
+#keyboardOnOff {
+    margin: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    display: flex;
+    -webkit-justify-content: center;
+    /* Safari */
+    justify-content: center;
+    text-align: center;
+}
+
+.keyboardTogleButton{
+    background-color: #fff;
+    margin: 0 0.5em;
+    padding: 0.5em 1em;
+    display: block;
+    border: 1px solid #666;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.keyboardTogleButton:hover {
+    background: #0066CC;
+    color: #fff;
+}
+
+#settingArea label{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#keyboard {
+    text-align: center;
+    margin:auto;
+    padding:0.5em;
+    display: flex;
+    border-top: 1px solid #aaa;
+    -webkit-justify-content: center;
+    /* Safari */
+    justify-content: center;
+    -webkit-flex-direction: column; /* Safari */
+    flex-direction: column;
+}
+
+.keyboardActived {
+    background-color: #97e3ff;
+}
+
+.keyboardInactived {
+    background-color: #888;
+}
+
+.key_row {
+/*    background-color: #fff;*/
+    margin: 0.25em auto;
+    display:flex;
+    -webkit-justify-content: center;
+    /* Safari */
+    justify-content: center;
+    text-align: center;
+}
+.key_obj {
+    list-style-type: none;
+    font-size: 18px;
+    display: block;
+    margin: 0 0.125em;
+    padding:0.25em 0.5em;
+    font-family: "Avenir Next", "Avenir", "Futura", "Century Gothic", "Lucida console", monospace;
+    font-weight: 500;
+    border-radius: 3px;
+    border: 1px solid #666;
+    background-color: #FFF;
+/*    cursor: pointer;*/
+}
+
+.key_pressed {
+/*    background-color: #ccc;*/
+    background-color: #ffeb00;
+}
+.keyText {
+    display:block;
+    width:5em;
+}
+
+
+#operationButtons {
+    background-color: #fff;
+}
+
+.operationList {
+    background-color: #97e3ff;
+    padding: 0;
+    display: flex;
+    -webkit-justify-content: center;
+    /* Safari */
+    justify-content: center;
+}
+
+.operationList li {
+    padding: 0.25em;
+    list-style-type: none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display: block;
+/*    display: table-cell;*/
+    /* 定義 */
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.operationList li:hover {
+    background: #0066CC;
+    color: #fff;
+}
+
+.operationButton {
+    display: block;
+    width: 4em;
+    text-align: center;
+    margin: 0.5em;
+}
+
+#operationKeyboard{
+    border-bottom: 1px solid #aaa;
+}
