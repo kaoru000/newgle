@@ -14,8 +14,16 @@ var apiJson = {
 var testText = "";
 
 // API送受信関数
-function callBot(mymsg) {
+function callBot(mymsg,mychara) {
     apiJson.utt = mymsg;
+    apiJson.t = mychara;
+    var botClassName = "";
+    var chatMessageClassName = "chatMessage";
+    if (mychara == 20) {
+        botClassName = "girl";
+    } else {
+        botClassName = "man";
+    }
     $.ajax({
             type: 'post',
             url: api,
@@ -25,12 +33,14 @@ function callBot(mymsg) {
             scriptCharset: 'utf-8'
         })
         .done(function (data) {
-            console.log(data.utt); // ←いろんな雑話が返ってくる
+            var botMessage = data.utt;
+            console.log(botMessage); // ←いろんな雑話が返ってくる
 //            console.log(data.yomi); // ←いろんな雑話が返ってくる
 //            testText = data.utt.toString();
 //            return data.utt.toString();
 //            return 1;
-            $("#board").append("<li>" + data.utt + "</li>");
+        $("#board").append("<li class = \"" + botClassName + " " + chatMessageClassName + "\" >" + botMessage + "</li>");
+        $('#msg').text(botMessage);
         })
         .fail(function (data) {
             console.log(data.responseText); // ←エラー時の処理
@@ -44,7 +54,13 @@ function callBot(mymsg) {
 
 function sendMessage () {
     var curentMessage = $('#msg').val();
-    callBot(curentMessage);
+    var curentChara = $('#chara').val();
+    callBot(curentMessage,curentChara);
+    if (curentChara == 20) {
+        $('#chara').val('');
+    } else {
+        $('#chara').val(20);
+    }
 }
 
 $('#sendButton').on('click', function () {
