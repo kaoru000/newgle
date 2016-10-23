@@ -32,21 +32,21 @@ table{border-collapse:collapse;border-spacing:0}
 /*# sourceMappingURL=sanitize.css.map */
 li{
 	list-style:none;}
-	
-.clearfix:after {  
-  content: ".";   
-  display: block;   
-  height: 0;   
-  clear: both;   
-  visibility: hidden;  
-}  
-  
-.clearfix { display: inline-table; }  
-  
-/* Hides from IE-mac \*/  
-* html .clearfix { height: 1%; }  
-.clearfix { display: block; }  
-/* End hide from IE-mac */  
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix { display: inline-table; }
+
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
 
 
 .newgle{
@@ -58,11 +58,12 @@ li{
 	text-align:center;
 	font-size:32px;
 }
-    
+
 .newgle table{
-    margin:10px;    
+    margin:10px;
+		width: 840px; 
 }
-    
+
 .newgle ul li{
         float:left;
 }
@@ -71,10 +72,10 @@ li{
 	width:200px;
     height: 680px;
 	margin-right:20px;
-    border-radius: 10px;        /* CSS3草案 */  
-    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
-    -moz-border-radius: 10px;   /* Firefox用 */  
-}  
+    border-radius: 10px;        /* CSS3草案 */
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
+    -moz-border-radius: 10px;   /* Firefox用 */
+}
 
 .chat{
 	width:600px;
@@ -86,9 +87,9 @@ li{
 	width:200px;
     height: 680px;
 	margin-right:20px;
-    border-radius: 10px;        /* CSS3草案 */  
-    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
-    -moz-border-radius: 10px;   /* Firefox用 */  
+    border-radius: 10px;        /* CSS3草案 */
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
+    -moz-border-radius: 10px;   /* Firefox用 */
 }
 
 .name{

@@ -26,8 +26,8 @@ main {
 #display {
     padding: 10px;
     background-color: lightgoldenrodyellow;
-    width: 50em;
-    height: 30em;
+    width: 500px;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
     overflow:scroll;

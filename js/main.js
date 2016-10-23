@@ -46,7 +46,7 @@ function callBot(mymsg,mychara) {
     } else {
         botClassName = "man";
     }
-    
+
     $.ajax({
             type: 'post',
             url: api,
@@ -87,19 +87,26 @@ function sendMessage () {
     var curentChara = $('#chara').val();
     //css関連のクラス名等
     var botClassName = "";
-    var chatMessageClassName = "chatMessage";
+    var chatMessageClassName = "chatMessage comment";
+    var charaClassPre = "";
+    var charaClassAfter = "";
 //    前のメッセージが女性か男性かで変える
     if (curentChara == 20) {
         botClassName = "man";
+        charaClassPre ="<div class=\"answer_box\"><p class=\"name02\">ヒロシ\</p><div class=\"arrow_answer\">"
+        charaClassAfter = "</div></div><img src=\"img/icon1.png\" alt=\"質問者\" class=\"left-image\"/></div>"
 //        botClassName = "girl";
     } else {
 //        botClassName = "man";
         botClassName = "girl";
+        charaClassPre ="<img src=\"img/icon2.png\" alt=\"質問者\" class=\"left-image\"/><div class=\"question_box\"><p class=\"name\">ミカ</p><div class=\"arrow_question\">"
+        charaClassAfter = "</div></div></div>"
+
     }
 
-    $("#board").append("<li class = \"" + botClassName + " " + chatMessageClassName + "\" >" + curentMessage + "</li>");
+    $("#board").append("<li class = \"" + botClassName + " " + chatMessageClassName + "\" >" +charaClassPre+ curentMessage + charaClassAfter +"</li>");
     callBot(curentMessage,curentChara);
-    
+
     if (curentChara == 20) {
         $('#chara').val('');
     } else {
@@ -122,4 +129,3 @@ $('#sendButton').on('click', function () {
         }
     });
 });
-
