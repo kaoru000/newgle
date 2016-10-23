@@ -1,0 +1,233 @@
+@charset "UTF-8";
+.newgle{
+	width:840px;
+	height:700px;
+}
+
+.newgle h1{
+	text-align:center;
+	font-size:32px;
+}
+    
+.newgle table{
+    margin:10px;    
+}
+    
+.newgle ul li{
+        float:left;
+}
+
+.mico{
+	width:200px;
+    height: 680px;
+	margin-right:20px;
+    border-radius: 10px;        /* CSS3草案 */  
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 10px;   /* Firefox用 */  
+}  
+
+.chat{
+	width:600px;
+    height:680px;
+    background-color: #6f92c0;
+}
+
+.hiroshi{
+	width:200px;
+    height: 680px;
+	margin-right:20px;
+    border-radius: 10px;        /* CSS3草案 */  
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 10px;   /* Firefox用 */  
+}
+
+.question_box,
+.answer_box{
+	width:80%;
+}
+
+.question_box{float: right;}
+.answer_box{float: left;}
+
+
+
+/* img.left-image{float: left;} */
+img.right_image{float: right;}
+
+
+p.name02,
+p.name{
+	font-size: 14px;
+	color: #fff;
+	margin:0;
+}
+
+p.name02{text-align: right;}
+
+
+
+.arrow_answer,
+.arrow_question {
+	position: relative;
+	display: inline-block;
+	padding: 3%;
+	width: 88%;
+	font-size: 13px;
+	margin-left:3%;
+	margin-top: 3px;
+	margin-bottom: 25px;
+	color: #000;
+	border-radius: 10px;
+}
+
+.arrow_question {
+	background: #fff;
+}
+
+.arrow_answer {
+	background: #85e249;
+}
+
+.arrow_answer:before,
+.arrow_question:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	margin-left: 0;
+	display: block;
+	width: 30px;
+	height: 30px;
+	z-index: -1;
+}
+
+.arrow_question:before {
+	left: -10px;
+	background: #fff;
+	border-radius: 0px 30px;
+}
+
+.arrow_answer:before{
+	right: -10px;
+	background: #85e249;
+	border-radius: 30px 0;
+}
+
+
+.arrow_answer:after,
+.arrow_question:after {
+	content: "";
+	position: absolute;
+	top: -10px;
+	margin-left: 0px;
+	display: block;
+	width: 25px;
+	height: 25px;
+	background: none repeat scroll 0% 0% #6f92c0;
+	z-index: -1;
+}
+
+.arrow_question:after {
+	left: -12px;
+	transform: rotate(10deg);
+	border-radius: 0px 30px;
+}
+
+.arrow_answer:after {
+	right: -12px;
+	border-radius: 30px 0px;
+	transform: rotate(20deg);
+}
+
+img.left-image,
+img.right_image{
+	width:15%;
+	margin-right: 10px;
+	overflow: hidden;
+}
+/* 吹き出し大枠 */
+.fuikidashWrap {
+    position:relative;
+    top:25px;
+    left:15px;
+    width:402px;
+}
+ 
+/* アイコン */
+.fuikidashWrap .icon {
+    float:left;
+    width:96px;
+}
+ 
+.fuikidashWrap section {
+    float:right;
+    width:296px;
+}
+ 
+/* 見出し */
+.fuikidashWrap h1 {
+    margin-bottom:10px;
+    color: #fff;
+    font-size: 88%;
+}
+ 
+/* 吹き出し */
+.fuikidashWrap .fukidashi {
+    position:relative;
+    width:296px;
+    height:86px;
+    color: #434866;
+    background: url(../img/fukidasi01.png) no-repeat left top;
+}
+.fuikidashWrap .fukidashi p {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    width: 281px;
+    text-align: center;
+}
+
+/* 偶数（自分） */
+.fuikidashWrap:nth-child(even) {
+    left:216px;
+}
+ 
+/* 偶数アイコン */
+.fuikidashWrap:nth-child(even) .icon {
+    float:right;
+}
+ 
+.fuikidashWrap:nth-child(even) section {
+    float:left;
+ 
+}
+.fuikidashWrap:nth-child(even) section h1 {
+    text-align:right;
+ 
+}
+ 
+/* 偶数吹き出し */
+.fuikidashWrap:nth-child(even) .fukidashi {
+    color:#2b4829;
+    background:url(../img/fukidasi02.png) no-repeat left top;
+}
+
+/* 奇数（相手） */
+.fuikidashWrap:nth-child(odd) {
+    left:15px;
+}
+ 
+/* 奇数アイコン */
+.fuikidashWrap:nth-child(odd) .icon {
+    float:left;
+}
+ 
+.fuikidashWrap:nth-child(odd) section {
+    float:right;
+ 
+}
+ 
+/* 奇数吹き出し */
+.fuikidashWrap:nth-child(odd) .fukidashi {
+    color:#434866;
+    background:url(../img/fukidasi01.png) no-repeat left top;
+}

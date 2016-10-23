@@ -1,14 +1,44 @@
-body{
-	width:100%;
-	min-width: 320px;
-	margin:0;
-	padding: 0;
-	background-color: #6f92c0;
+@charset "UTF-8";
+.newgle{
+	width:840px;
+	height:700px;
 }
 
-#wrapper{
-	margin: 20px auto;
-	width:96%;
+.newgle h1{
+	text-align:center;
+	font-size:32px;
+}
+    
+.newgle table{
+    margin:10px;    
+}
+    
+.newgle ul li{
+        float:left;
+}
+
+.mico{
+	width:200px;
+    height: 680px;
+	margin-right:20px;
+    border-radius: 10px;        /* CSS3草案 */  
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 10px;   /* Firefox用 */  
+}  
+
+.chat{
+	width:600px;
+    height:680px;
+    background-color: #6f92c0;
+}
+
+.hiroshi{
+	width:200px;
+    height: 680px;
+	margin-right:20px;
+    border-radius: 10px;        /* CSS3草案 */  
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 10px;   /* Firefox用 */  
 }
 
 .question_box,
@@ -20,12 +50,6 @@ body{
 .answer_box{float: left;}
 
 
-img.left-image,
-img.right_image{
-	width:15%;
-	margin-right: 10px;
-	overflow: hidden;
-}
 
 /* img.left-image{float: left;} */
 img.right_image{float: right;}
@@ -103,13 +127,24 @@ p.name02{text-align: right;}
 }
 
 .arrow_question:after {
+    background-image: url(img/question_ico.png) no-repeat;
 	left: -12px;
 	transform: rotate(10deg);
 	border-radius: 0px 30px;
+    z-index:10;
 }
 
 .arrow_answer:after {
+    background-image: url(img/answer_ico.png) no-repeat;
 	right: -12px;
 	border-radius: 30px 0px;
 	transform: rotate(20deg);
+    z-index:10;
+}
+
+img.left-image,
+img.right_image{
+	width:15%;
+	margin-right: 10px;
+	overflow: hidden;
 }
