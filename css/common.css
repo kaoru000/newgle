@@ -25,7 +25,7 @@ main {
 }
 #display {
     padding: 10px;
-    background-color: aqua;
+    background-color: lightgoldenrodyellow;
     width: 50em;
     height: 30em;
     margin-left: auto;
@@ -93,6 +93,23 @@ main {
     display: block
 }
 
+.girl {
+    background-color:lightpink;
+    text-align: left;
+}
+.man {
+    background-color:lightblue;
+    text-align: right;
+}
+
+.chatMessage {
+    padding: 1em;
+}
+
+.labelMsg {
+    margin-top: 0.5em;
+}
+
 #msg {
     display: block;
     margin: auto;
@@ -101,13 +118,34 @@ main {
     font-size: 14px;
 }
 
+.msgBox {
+    display: block;
+    margin: auto;
+    width: 30em;
+    height: 5em;
+    font-size: 14px;
+}
+
+.linkInMessage {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+#recommendUrl {
+    display: block;
+    margin: auto;
+    width: 30em;
+    height: 1em;
+    font-size: 14px;
+}
+
 #sendButton {
     display: block;
     margin: auto;
     margin-top: 10px;
-    font-size: 24px;
-    padding: 10px;
-    border-radius: 10px;
+    font-size: 18px;
+    padding: 0.5em;
+    border-radius: 0.75em;
     background-color: #fff;
     border: 1px solid #000;
 }

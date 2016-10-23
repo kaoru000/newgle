@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>simple chat!</title>
+    <title>newgle</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -12,6 +12,9 @@
 
 <body>
     <main>
+        <audio id="newSound" preload="auto">
+            <source src="audio/new.mp3" type="audio/mp3">
+        </audio>
 
         <div id="display">
             <ul id="board">
@@ -21,20 +24,31 @@
 
         <div id="operation">
             <div id="user">
+<!--
                 <label for="name" class="userProperty">名前：</label>
                 <input type="text" id="name" class="userProperty">
+-->
                 <label for="chara" class="userProperty">キャラクター：</label>
                 <input type="text" id="chara" class="userProperty">
             </div>
             <div class="info">
-               キャラクター：<br>
-                20 : 関西弁キャラ/
-                30 : 赤ちゃんキャラ/
-                指定なし : デフォルトキャラ
+                キャラクター：<br>
+                20 : 関西弁/
+                30 : 赤ちゃん/
+                指定なし : デフォルト
             </div>
             <!--メッセージの入力エリア-->
-            <textarea id="msg" cols="30" rows="4"></textarea>
+            <label class="labelMsg" for="msg_1st">最初のメッセージ</label>
+            <textarea class="msgBox" id="msg_1st" cols="30" rows="4">こんにちは。</textarea>
+<!--
+            <label class="labelMsg" for="msg_bot">ボットからのメッセージ</label>
+            <textarea class="msgBox" id="msg_bot" cols="30" rows="4"></textarea>
+-->
+            <label class="labelMsg" for="msg_article">差し込みメッセージ</label>
+            <textarea class="msgBox" id="msg_article" cols="30" rows="4">差し込みメッセージ。</textarea>
+            <label class="labelMsg"  for="recommendUrl">おすすめURL</label><textarea id="recommendUrl" cols="30" rows="1"></textarea>
             <button id="sendButton">メッセージ送信</button>
+            
         </div>
     </main>
     <script src="main.js"></script>
