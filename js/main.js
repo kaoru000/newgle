@@ -93,13 +93,13 @@ function sendMessage () {
 //    前のメッセージが女性か男性かで変える
     if (curentChara == 20) {
         botClassName = "man";
-        charaClassPre ="<div class=\"answer_box\"><p class=\"name02\">ヒロシ\</p><div class=\"arrow_answer\">"
+        charaClassPre ="<div class=\"answer_box\"><div class=\"arrow_answer\">"
         charaClassAfter = "</div></div><img src=\"img/hiroshi_icon1.png\" alt=\"質問者\" class=\"left-image\"/></div>"
 //        botClassName = "girl";
     } else {
 //        botClassName = "man";
         botClassName = "girl";
-        charaClassPre ="<img src=\"img/mika_icon1.png\" alt=\"質問者\" class=\"left-image\"/><div class=\"question_box\"><p class=\"name\">ミカ</p><div class=\"arrow_question\">"
+        charaClassPre ="<img src=\"img/mika_icon1.png\" alt=\"質問者\" class=\"left-image\"/><div class=\"question_box\"><div class=\"arrow_question\">"
         charaClassAfter = "</div></div></div>"
 
     }
