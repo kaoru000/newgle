@@ -25,9 +25,9 @@ main {
 }
 #display {
     padding: 10px;
-    background-color: lightgoldenrodyellow;
+    /*background-color: lightgoldenrodyellow;*/
     width: 500px;
-    height: 300px;
+    height: 800px;
     margin-left: auto;
     margin-right: auto;
     overflow:scroll;
@@ -94,11 +94,11 @@ main {
 }
 
 .girl {
-    background-color:lightpink;
+    /*background-color:lightpink;*/
     text-align: left;
 }
 .man {
-    background-color:lightblue;
+    /*background-color:lightblue;*/
     text-align: right;
 }
 
