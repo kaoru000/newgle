@@ -154,6 +154,23 @@ main {
     cursor: pointer;
 }
 
+#getKeyPhrase:hover {
+    cursor: pointer;
+}
+
+#getKeyPhrase {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 0.5em;
+    border-radius: 0.75em;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+
+
 /*以下、特殊キーボード関連CSS*/
 
 /*注意書き*/

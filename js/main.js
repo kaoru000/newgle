@@ -105,6 +105,10 @@ function sendMessage () {
     }
 
     $("#board").append("<li class = \"" + botClassName + " " + chatMessageClassName + "\" >" +charaClassPre+ curentMessage + charaClassAfter +"</li>");
+    if (messageCounter == insertArticleNumber) {
+        curentMessage = $("#keyPhrase").val();
+        console.log("#keyPhrase:" + curentMessage);
+    }
     callBot(curentMessage,curentChara);
 
     if (curentChara == 20) {
